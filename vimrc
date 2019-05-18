@@ -3,6 +3,18 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" set line numbering
+set number
+
+" set autoindenting
+set autoindent
+
+" set tab length to 2
+set ts=2
+set sts=2
+set et     "expand tabs to spaces
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
