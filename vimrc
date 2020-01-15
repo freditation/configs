@@ -1,3 +1,9 @@
+" set mapleader to backslash
+let g:mapleader='\'
+
+" set empty .tex files to tex, not plaintex
+let g:tex_flavor='latex'
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -10,10 +16,17 @@ set number
 " set autoindenting
 set autoindent
 
+" set incremental searching and search highlighting
+set incsearch
+set hlsearch
+
 " set tab length to 2
 set ts=2
 set sts=2
-set et     "expand tabs to spaces
+set et     
+
+" allow for mouse clicking
+set mouse=a
 
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -26,6 +39,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
+
+" Goyo for clutter-free writing
+Plugin 'junegunn/goyo.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -58,3 +74,4 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+

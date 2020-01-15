@@ -146,3 +146,7 @@ export IN_API_KEY="ccfeedd2d3d04810a781904c5ddb9d7e"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# set Tesseract environment variable
+export TESSERACT=/usr/bin/tesseract
+
