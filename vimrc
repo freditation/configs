@@ -4,74 +4,48 @@ let g:mapleader='\'
 " set empty .tex files to tex, not plaintex
 let g:tex_flavor='latex'
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" enable Python syntax highlighting
+let python_highlight_all = 1
+
+set nocompatible    " be iMproved, required by Vim
+filetype on         " detect file type
+syntax enable       " syntax highlighting
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" set line numbering
-set number
+set number      " show line numbers
+set mouse=a     " allow mouse clicking
+set title       " show file name in window title bar
+set undofile    " persistent undo if file is closed and reopened
 
-" set autoindenting
-set autoindent
+set incsearch     " show partial matches
+set hlsearch      " search highlighting
+set ignorecase    " ignore case (needed alongside 'smartcase')
+set smartcase     " case sensitive when query has uppercase letter
+set showmatch     " show matching pair for [], {} and ()
+set listchars     " highlight trailing whitespace
 
-" set incremental searching and search highlighting
-set incsearch
-set hlsearch
+set autoindent       " new lines inherit indentation of previous
+set expandtab        " convert tabs to spaces 
+set tabstop=2        " amount of whitespace to add with tab
+set softtabstop=2    " amount of whitespace to remove with backspace
+set shiftwidth=2     " set amount of whitespace to insert when shifting
+set shiftround       " round shift indent to nearest multiple of 'shiftwidth'
 
-" set tab length to 2
-set ts=2
-set sts=2
-set et     
+call vundle#begin()    " required by Vundle
 
-" allow for mouse clicking
-set mouse=a
+Plugin 'VundleVim/Vundle.vim'                   " plugin manager (required by Vundle)
+Plugin 'godlygeek/tabular'                      " for Markdown
+Plugin 'plasticboy/vim-markdown'                " for Markdown
+Plugin 'LaTeX-Suite-aka-Vim-LaTeX'              " for LaTeX
+Plugin 'junegunn/goyo.vim'                      " for clutter-free writing
+Plugin 'tpope/vim-fugitive'                     " example plugin hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'    " example plugin not hosted on GitHub
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}      " example script in a subdirectory 
 
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call vundle#end()    " required by Vundle
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Plugins for markdown recommended by Pete
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
-
-" Goyo for clutter-free writing
-Plugin 'junegunn/goyo.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+filetype plugin on           " required by vim-latex
+filetype plugin indent on    " required by Vundle
 
