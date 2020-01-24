@@ -17,7 +17,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set number      " show line numbers
 set mouse=a     " allow mouse clicking
 set title       " show file name in window title bar
-set undofile    " persistent undo if file is closed and reopened
 
 set incsearch     " show partial matches
 set hlsearch      " search highlighting
