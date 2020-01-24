@@ -24,7 +24,6 @@ set hlsearch      " search highlighting
 set ignorecase    " ignore case (needed alongside 'smartcase')
 set smartcase     " case sensitive when query has uppercase letter
 set showmatch     " show matching pair for [], {} and ()
-set listchars     " highlight trailing whitespace
 
 set autoindent       " new lines inherit indentation of previous
 set expandtab        " convert tabs to spaces 
