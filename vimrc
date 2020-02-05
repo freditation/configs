@@ -3,6 +3,9 @@ let g:mapleader='\'
 
 " set empty .tex files to tex, not plaintex
 let g:tex_flavor='latex'
+let g:Tex_GotoError=0
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -synctex=1 -src-specials -interaction=nonstopmode $*'
 
 " enable Python syntax highlighting
 let python_highlight_all = 1
