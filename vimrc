@@ -42,6 +42,7 @@ Plugin 'plasticboy/vim-markdown'                " for Markdown
 Plugin 'LaTeX-Suite-aka-Vim-LaTeX'              " for LaTeX
 Plugin 'junegunn/goyo.vim'                      " for clutter-free writing
 Plugin 'psf/black'                              " Python Black code formatter
+Plugin 'prettier/vim-prettier'                  " Prettier code formatter
 Plugin 'tpope/vim-fugitive'                     " example plugin hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'    " example plugin not hosted on GitHub
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}      " example script in a subdirectory 

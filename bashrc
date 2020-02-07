@@ -92,6 +92,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# alias for accessing personal cheat sheet
+alias cheat='vim ~/Dropbox/cheat_sheet.md'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -149,4 +152,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # set Tesseract environment variable
 export TESSERACT=/usr/bin/tesseract
+
+# add TexLive to PATH
+export PATH=$PATH:/usr/local/texlive/2019/bin/x86_64-linux
+
+# add yarn to PATH
+export PATH="$(yarn global bin):$PATH"
 
