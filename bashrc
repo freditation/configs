@@ -93,7 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # alias for accessing personal cheat sheet
-alias cheat='vim ~/Dropbox/cheat_sheet.md'
+alias cheat='vim ~/Dropbox/cheat_sheet.md -c '\''set foldlevel=1'\'''
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
