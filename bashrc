@@ -156,6 +156,3 @@ export TESSERACT=/usr/bin/tesseract
 # add TexLive to PATH
 export PATH=$PATH:/usr/local/texlive/2019/bin/x86_64-linux
 
-# add yarn to PATH
-export PATH="$(yarn global bin):$PATH"
-
